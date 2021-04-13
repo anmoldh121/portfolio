@@ -3,7 +3,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import "./App.css";
 import Navbar from "./components/navbar";
 import Intro from "./components/intro";
-import Rotator from "./components/rotator";
 
 function Box(props) {
   return (
