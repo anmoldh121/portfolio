@@ -1,0 +1,49 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 50px;
+}
+
+ul {
+    display: flex; 
+}
+
+.logo {
+    margin-left: 10px
+}
+
+li {
+    list-style-type: none;
+    margin: 0 10px;
+    font-size: 2vh;
+}
+
+.selected {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: #5DC2A4;
+    text-decoration-thickness: 3px;
+}
+
+.text-seconday {
+    color: #353535
+}
+
+.btn {
+    margin-right: 20px;
+    border: none;
+    font-size: 2vh;
+    padding: 1vh
+}
+
+.btn-primary {
+    background-color: #5DC2A4;
+}
+
+#primary-rotator {
+    color: #5DC2A4
+}
+

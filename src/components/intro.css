@@ -1,0 +1,14 @@
+.root {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 18vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  font-size: 7vw;
+  font-weight: bold;
+  color: #353535;
+}
