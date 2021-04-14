@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import "./App.css";
 import Navbar from "./components/navbar";
@@ -17,7 +17,6 @@ function Box(props) {
 function Sphere(props) {
   const mesh = useRef();
   const toggle = useRef();
-  const aboutgroupref = useRef();
   toggle.current = true;
 
   useFrame(() => {
@@ -41,13 +40,12 @@ function Sphere(props) {
   );
 }
 
-const Group = ({ children }) => {};
-
 function App() {
-  const anchors = ["Page 1", "Page 2"];
   const pageable = useRef();
   const [currentPage, setCurrentPage] = useState(0);
-
+  
+  const anchors = useMemo(() => ["Page 1", "Page 2"], []);
+  
   useEffect(() => {
     pageable.current = new Pageable("#container", {
       childSelector: "[data-anchor]",
@@ -96,7 +94,7 @@ function App() {
         setCurrentPage(event.index);
       },
     });
-  }, []);
+  }, [anchors]);
 
   const onPipClick = (anch) => {
     pageable.current.scrollToPage(anch + 1);
