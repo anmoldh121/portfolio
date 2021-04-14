@@ -5,6 +5,8 @@
     justify-content: space-between;
     align-items: center;
     line-height: 50px;
+    background-color: white;
+    z-index: 999;
 }
 
 ul {
